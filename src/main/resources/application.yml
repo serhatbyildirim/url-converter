@@ -1,3 +1,14 @@
 spring:
   application:
     name: Trendyol Sample Api
+
+  couchbase:
+    bootstrap-hosts: localhost
+    bucket:
+      name: url
+      password: url123
+    env:
+      timeouts:
+        connect: 10000ms
+        socket-connect: 10000ms
+        key-value: 10000ms

@@ -1,6 +1,6 @@
 package com.trendyol.sample.controller;
 
-import com.trendyol.sample.service.UrlService;
+import com.trendyol.sample.service.UrlConvertBuilderService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +22,7 @@ public class UrlControllerTest {
     private MockMvc mockMvc;
 
     @MockBean
-    private UrlService urlService;
+    private UrlConvertBuilderService urlConvertBuilderService;
 
     @Test
     public void it_should_convert() throws Exception {
@@ -34,6 +34,6 @@ public class UrlControllerTest {
                 .andExpect(status().isOk());
 
         //Then
-        verify(urlService).convert("trendyol.com");
+        verify(urlConvertBuilderService).build("trendyol.com");
     }
 }
