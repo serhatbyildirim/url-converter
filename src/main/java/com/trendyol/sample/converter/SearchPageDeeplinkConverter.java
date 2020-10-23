@@ -7,13 +7,13 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 import java.util.List;
 
+import static com.trendyol.sample.utils.UrlUtils.DEEPLINK_SEARCH_QUERY_PARAMETER;
+import static com.trendyol.sample.utils.UrlUtils.HTTPS;
+import static com.trendyol.sample.utils.UrlUtils.PAGE_PARAMETER;
+import static com.trendyol.sample.utils.UrlUtils.WEB_URL_HOST;
+
 @Component
 public class SearchPageDeeplinkConverter implements UrlConvertHandler {
-
-    private static final String WEB_URL_HOST = "www.trendyol.com";
-    private static final String HTTPS = "https";
-    private static final String PAGE_PARAMETER = "Page";
-    private static final String DEEPLINK_SEARCH_QUERY_PARAMETER = "Query";
 
     public String convert(String url) {
         UriComponentsBuilder uriComponentsBuilder = UriComponentsBuilder.fromUriString(url);

@@ -9,14 +9,14 @@ import org.springframework.web.util.UriUtils;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 
+import static com.trendyol.sample.utils.UrlUtils.DEEPLINK_HOST;
+import static com.trendyol.sample.utils.UrlUtils.DEEPLINK_SEARCH_QUERY_PARAMETER;
+import static com.trendyol.sample.utils.UrlUtils.PAGE_PARAMETER;
+import static com.trendyol.sample.utils.UrlUtils.SEARCH_PAGE_PARAMETER_VALUE;
+import static com.trendyol.sample.utils.UrlUtils.SEARCH_QUERY_PARAMETER;
+
 @Component
 public class SearchPageWebUrlConverter implements UrlConvertHandler {
-
-    private static final String SEARCH_QUERY_PARAMETER = "q";
-    private static final String DEEPLINK_HOST = "ty:/";
-    private static final String PAGE_PARAMETER = "Page";
-    private static final String SEARCH_PAGE_PARAMETER_VALUE = "Search";
-    private static final String DEEPLINK_SEARCH_QUERY_PARAMETER = "Query";
 
     public String convert(String url) {
         String searchQuery = getSearchQuery(url);

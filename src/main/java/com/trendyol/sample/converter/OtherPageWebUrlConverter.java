@@ -6,13 +6,13 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 import java.util.Objects;
 
+import static com.trendyol.sample.utils.UrlUtils.DEEPLINK_HOST;
+import static com.trendyol.sample.utils.UrlUtils.HOME_PARAMETER_VALUE;
+import static com.trendyol.sample.utils.UrlUtils.MY_ACCOUNT;
+import static com.trendyol.sample.utils.UrlUtils.PAGE_PARAMETER;
+
 @Component
 public class OtherPageWebUrlConverter implements UrlConvertHandler {
-
-    private static final String MY_ACCOUNT = "Hesabim";
-    private static final String DEEPLINK_HOST = "ty:/";
-    private static final String PAGE_PARAMETER = "Page";
-    private static final String HOME_PARAMETER_VALUE = "Home";
 
     public String convert(String url) {
 

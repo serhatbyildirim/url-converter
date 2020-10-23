@@ -7,14 +7,14 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 import java.util.List;
 
+import static com.trendyol.sample.utils.UrlUtils.HTTPS;
+import static com.trendyol.sample.utils.UrlUtils.PAGE_PARAMETER;
+import static com.trendyol.sample.utils.UrlUtils.PRODUCT_DETAIL_PAGE_PARAMETER_VALUE;
+import static com.trendyol.sample.utils.UrlUtils.SEARCH_PAGE_PARAMETER_VALUE;
+import static com.trendyol.sample.utils.UrlUtils.WEB_URL_HOST;
+
 @Component
 public class OtherPageDeeplinkConverter implements UrlConvertHandler {
-
-    private static final String PAGE_PARAMETER = "Page";
-    private static final String PRODUCT_DETAIL_PAGE_PARAMETER_VALUE = "Product";
-    private static final String SEARCH_PAGE_PARAMETER_VALUE = "Search";
-    private static final String WEB_URL_HOST = "www.trendyol.com";
-    private static final String HTTPS = "https";
 
     public String convert(String url) {
 
@@ -30,6 +30,6 @@ public class OtherPageDeeplinkConverter implements UrlConvertHandler {
         List<String> pageParameterList = UriComponentsBuilder.fromUriString(url).build().getQueryParams().get(PAGE_PARAMETER);
         return CollectionUtils.isNotEmpty(pageParameterList) &&
                 pageParameterList.stream()
-                .anyMatch(parameter -> parameter.equals(PRODUCT_DETAIL_PAGE_PARAMETER_VALUE) || parameter.equals(SEARCH_PAGE_PARAMETER_VALUE));
+                        .anyMatch(parameter -> parameter.equals(PRODUCT_DETAIL_PAGE_PARAMETER_VALUE) || parameter.equals(SEARCH_PAGE_PARAMETER_VALUE));
     }
 }

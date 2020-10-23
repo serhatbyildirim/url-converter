@@ -147,7 +147,7 @@ public class UrlConvertBuilderServiceTest {
         //then
         assertThatCode(() -> service.build("invalidUrl"))
                 .isInstanceOf(UrlConvertException.class)
-                .hasMessageContaining("Wrong Url");
+                .hasMessageContaining("Invalid Url");
     }
 
 }

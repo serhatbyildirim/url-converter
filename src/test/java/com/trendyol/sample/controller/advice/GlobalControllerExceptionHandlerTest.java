@@ -50,7 +50,7 @@ public class GlobalControllerExceptionHandlerTest {
         resultActions
                 .andExpect(status().isBadRequest())
                 .andExpect(jsonPath("$.exception", is("UrlConvertException")))
-                .andExpect(jsonPath("$.errors[0]", is("Wrong Url")))
+                .andExpect(jsonPath("$.errors[0]", is("Invalid Url")))
                 .andExpect(jsonPath("$.timestamp", notNullValue()));
     }
 }

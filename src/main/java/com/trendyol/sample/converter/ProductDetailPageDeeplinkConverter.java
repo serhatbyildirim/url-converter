@@ -7,17 +7,17 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 import java.util.List;
 
+import static com.trendyol.sample.utils.UrlUtils.BOUTIQUE_ID_PARAMETER;
+import static com.trendyol.sample.utils.UrlUtils.CAMPAIGN_ID_PARAMETER;
+import static com.trendyol.sample.utils.UrlUtils.CONTENT_ID_PARAMETER;
+import static com.trendyol.sample.utils.UrlUtils.DEEPLINK_MERCHANT_ID_PARAMETER;
+import static com.trendyol.sample.utils.UrlUtils.HTTPS;
+import static com.trendyol.sample.utils.UrlUtils.MERCHANT_ID_PARAMETER;
+import static com.trendyol.sample.utils.UrlUtils.PAGE_PARAMETER;
+import static com.trendyol.sample.utils.UrlUtils.WEB_URL_HOST;
+
 @Service
 public class ProductDetailPageDeeplinkConverter implements UrlConvertHandler {
-
-    private static final String BOUTIQUE_ID_PARAMETER = "boutiqueId";
-    private static final String MERCHANT_ID_PARAMETER = "merchantId";
-    private static final String DEEPLINK_MERCHANT_ID_PARAMETER = "MerchantId";
-    private static final String CAMPAIGN_ID_PARAMETER = "CampaignId";
-    private static final String PAGE_PARAMETER = "Page";
-    private static final String CONTENT_ID_PARAMETER = "ContentId";
-    private static final String WEB_URL_HOST = "www.trendyol.com";
-    private static final String HTTPS = "https";
 
     public String convert(String url) {
 

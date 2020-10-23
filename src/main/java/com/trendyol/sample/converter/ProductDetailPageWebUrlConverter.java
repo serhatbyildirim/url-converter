@@ -8,18 +8,18 @@ import org.springframework.web.util.UriComponentsBuilder;
 import java.util.List;
 import java.util.Objects;
 
+import static com.trendyol.sample.utils.UrlUtils.BOUTIQUE_ID_PARAMETER;
+import static com.trendyol.sample.utils.UrlUtils.CAMPAIGN_ID_PARAMETER;
+import static com.trendyol.sample.utils.UrlUtils.CONTENT_ID_PARAMETER;
+import static com.trendyol.sample.utils.UrlUtils.DEEPLINK_HOST;
+import static com.trendyol.sample.utils.UrlUtils.DEEPLINK_MERCHANT_ID_PARAMETER;
+import static com.trendyol.sample.utils.UrlUtils.MERCHANT_ID_PARAMETER;
+import static com.trendyol.sample.utils.UrlUtils.PAGE_PARAMETER;
+import static com.trendyol.sample.utils.UrlUtils.PRODUCT_DETAIL_PAGE_PARAMETER_VALUE;
+import static com.trendyol.sample.utils.UrlUtils.PRODUCT_URL;
+
 @Service
 public class ProductDetailPageWebUrlConverter implements UrlConvertHandler {
-
-    private static final String BOUTIQUE_ID_PARAMETER = "boutiqueId";
-    private static final String MERCHANT_ID_PARAMETER = "merchantId";
-    private static final String DEEPLINK_MERCHANT_ID_PARAMETER = "MerchantId";
-    private static final String CAMPAIGN_ID_PARAMETER = "CampaignId";
-    private static final String PAGE_PARAMETER = "Page";
-    private static final String PRODUCT_DETAIL_PAGE_PARAMETER_VALUE = "Product";
-    private static final String CONTENT_ID_PARAMETER = "ContentId";
-    private static final String PRODUCT_URL = "-p-";
-    private static final String DEEPLINK_HOST = "ty:/";
 
     public String convert(String url) {
 
